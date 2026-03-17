@@ -1,13 +1,13 @@
-import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { Outlet } from "react-router";
+import { Navbar, Footer } from "./components/index";
 export default function App() {
   return (
     <>
-      <h1 className="text-4xl font-bold text-gray-700 scroll-smooth">
-        Welcome to VARA OS{" "}
-        <span className="text-7xl animate-pulse">
-          <HiOutlineDesktopComputer />
-        </span>
-      </h1>
+      <div className="bg-black min-h-screen scroll-smooth overflow-x-hidden">
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 }
